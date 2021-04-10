@@ -28,36 +28,22 @@
 <div class="row">
     <!--entradas-->
     <div class="col-lg-9">
-        <!--entrada individual-->
-        <div class="card-body">
+ <?php if ( have_posts() ) : 
+    while ( have_posts() ) : the_post(); 
+    <div class="card-body">
+        <a href="single.html">
+           <h2>Titulo Entrada</h2> 
+        </a>
+        <img src="img/1200.jpg" alt="" class="mb-3 img-fluid">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure reiciendis hic quidem. 
+            Ducimus repellat, qui ullam, similique labore veniam aliquam sequi modi laborum saepe
+            ipsum assumenda magnam quidem nulla atque.</p>
             <a href="single.html">
-               <h2>Titulo Entrada</h2> 
+            <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
             </a>
-            <img src="img/1200.jpg" alt="" class="mb-3 img-fluid">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure reiciendis hic quidem. 
-                Ducimus repellat, qui ullam, similique labore veniam aliquam sequi modi laborum saepe
-                ipsum assumenda magnam quidem nulla atque.</p>
-                <a href="single.html">
-                <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-                </a>
-        </div>
-        <!--entrada individual-->
-
-                <!--entrada individual-->
-                <div class="card-body">
-                    <a href="single.html">
-                       <h2>Titulo Entrada</h2> 
-                    </a>
-                    <img src="img/1200.jpg" alt="" class="mb-3 img-fluid">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure reiciendis hic quidem. 
-                        Ducimus repellat, qui ullam, similique labore veniam aliquam sequi modi laborum saepe
-                        ipsum assumenda magnam quidem nulla atque.</p>
-                        <a href="single.html">
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-                        </a>
-                </div>
-                <!--entrada individual-->
-
+    </div>
+    endwhile; 
+endif; ?>
     </div>
     <!--entradas-->
     <!--side-->
