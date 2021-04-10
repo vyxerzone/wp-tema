@@ -9,3 +9,13 @@ function bootstrap_css() {
   					); 
 }
 add_action( 'wp_enqueue_scripts', 'bootstrap_css');
+
+// Incluir Bootstrap JS
+function bootstrap_js() {
+	wp_enqueue_script( 'bootstrap_js', 
+  					get_stylesheet_directory_uri() . '/js/bootstrap.min.js', 
+  					array('jquery'), 
+  					'5.0', 
+  					true); 
+}
+add_action( 'wp_enqueue_scripts', 'bootstrap_js');
